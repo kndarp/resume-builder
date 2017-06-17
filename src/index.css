@@ -3,3 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.resume-letterhead{
+  padding-left: 20px; 
+  margin: 0
+}
+
+.resume-title{ 
+  color: black;
+}
+
+.resume-subtitle{ 
+  color: "grey"; 
+}
+
+.resume-contact{ 
+  display: "inline"; 
+}

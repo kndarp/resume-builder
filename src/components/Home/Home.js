@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
 import LetterHead from "../LetterHead";
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 export default class Home extends Component{
     render(){
         return(
-            <div> 
-                <LetterHead/>
-            </div>
+            <Grid fluid>
+                        <LetterHead/>
+            </Grid>
         )
     }
 }

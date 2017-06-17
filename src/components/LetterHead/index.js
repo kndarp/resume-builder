@@ -1,6 +1,11 @@
+/**
+ * Created by Kndarp Patel (github.com/kndarp) 
+ */
+
 import React,{Component} from 'react';
 import Paper from 'material-ui/Paper';
 import ProfilePicture from "../ProfilePicture";
+import {Row, Col} from 'react-flexbox-grid';
 
 const mainPaperStyle = {
     margin: 20, 
@@ -10,18 +15,36 @@ const mainPaperStyle = {
 
 const profilePicturePosition = {
     position: "relative",
-    left: 50,
     top: -75,
     float: "left"
 }
 
+
 export default class LetterHead extends Component{
     render(){
         return(
-            <Paper zdepth = "2" style = {mainPaperStyle}>
-                <ProfilePicture src = "http://via.placeholder.com/180x180" position = {profilePicturePosition}/>
-                <h1 style = {{"display" : "inline"}}>Lorem Ipsum</h1>
-            </Paper>
+            <Row>
+                <Col xs={12} >
+                    <Paper zdepth = "2" style = {mainPaperStyle}>
+                        <Col lg ={2} xs={12}>
+                            <ProfilePicture src = "http://via.placeholder.com/180x180" position = {profilePicturePosition}/>
+                        </Col>
+                        <Col lgOffset = {2} lg = {10} xs ={12}>
+                            <Row>
+                                <h1 className = "resume-letterhead resume-title" >Lorem Ipsum</h1>
+                            </Row>
+                            <Row>
+                                <h4 className = "resume-letterhead resume-subtitle">Tattooed pop-up pug</h4>
+                            </Row>
+                            <hr/>
+                            <Row>
+                                <h5 className = "resume-letterhead resume-contact">+1234567910</h5>     |
+                                <h5 className = "resume-letterhead resume-contact">tattoo-pop-up@pug.com</h5>
+                            </Row>
+                        </Col>
+                    </Paper>
+                </Col>
+            </Row>
         )
     }
 }
