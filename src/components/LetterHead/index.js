@@ -13,35 +13,31 @@ const mainPaperStyle = {
     padding : 20
 }
 
-const profilePicturePosition = {
-    position: "relative",
-    top: -75,
-    float: "left"
-}
-
-
 export default class LetterHead extends Component{
     render(){
         return(
             <Row>
                 <Col xs={12} >
                     <Paper zdepth = "2" style = {mainPaperStyle}>
-                        <Col lg ={2} xs={12}>
-                            <ProfilePicture src = "http://via.placeholder.com/180x180" position = {profilePicturePosition}/>
-                        </Col>
-                        <Col lgOffset = {2} lg = {10} xs ={12}>
-                            <Row>
-                                <h1 className = "resume-letterhead resume-title" >Lorem Ipsum</h1>
-                            </Row>
-                            <Row>
-                                <h4 className = "resume-letterhead resume-subtitle">Tattooed pop-up pug</h4>
-                            </Row>
-                            <hr/>
-                            <Row>
-                                <h5 className = "resume-letterhead resume-contact">+1234567910</h5>     |
-                                <h5 className = "resume-letterhead resume-contact">tattoo-pop-up@pug.com</h5>
-                            </Row>
-                        </Col>
+                        
+                            <Col md ={3} xs={8} >
+                                <ProfilePicture src = "http://via.placeholder.com/180x180" className = "resume-letterhead resume-profile-picture"/>
+                            </Col>
+                            <Col md ={12} xs= {12}>
+                                <Row>
+                                    <h1 className = "resume-letterhead resume-title" >Lorem Ipsum</h1>
+                                </Row>
+                                <Row>
+                                    <h4 className = "resume-letterhead resume-subtitle">Tattooed pop-up pug</h4>
+                                </Row>
+                                <hr/>
+                                <Row>
+                                    <h5 className = "resume-letterhead resume-contact">+1234567910</h5>     
+                                    <h5 className = "resume-letterhead resume-contact">|</h5>
+                                    <h5 className = "resume-letterhead resume-contact">tattoo-pop-up@pug.com</h5>
+                                </Row>
+                            </Col>
+                        
                     </Paper>
                 </Col>
             </Row>

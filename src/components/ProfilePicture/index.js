@@ -7,7 +7,6 @@ var profilePictureStyle = {
     height: 200
 }
 const imgStyle = {
-    margin: 10,
     width: 180,
     height: 180
 }
@@ -18,7 +17,7 @@ export default class ProfilePicture extends Component{
         };
 
         return(
-           <Paper zdepth = {5} style = {profilePictureStyle}>
+           <Paper zdepth = {5} style = {profilePictureStyle} className = {this.props.className}>
             <img src = {this.props.src} style = {imgStyle}/>
             </Paper>
         )
